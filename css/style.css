@@ -318,7 +318,7 @@ a {
 
 .main {
   height: 864px;
-  background: url("/images/title-bg.jpg") 0 0 no-repeat;
+  background: url("../images/title-bg.jpg") 0 0 no-repeat;
   background-size: cover;
   text-align: center;
   position: relative;
