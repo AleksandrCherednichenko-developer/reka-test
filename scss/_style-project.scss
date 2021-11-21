@@ -1,0 +1,54 @@
+.header {
+   &-project {
+      top: 52px;
+      color: #757470;
+   }
+   .logo-project {
+      svg,
+      use {
+         fill: #141215;
+      }
+   }
+}
+
+.content {
+   font: 400 18px/30px "Roboto";
+   color: #131217;
+   text-align: center;
+   &__link {
+      display: inline-block;
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #131217;
+      border-bottom: 2px solid #ccbb9e;
+      padding: 184px 0 13px;
+      margin-bottom: 13px;
+      .home-link {
+         margin-right: 13px;
+      }
+      .title-link {
+         color: #757470;
+      }
+   }
+
+   &__project-title {
+      font: 600 51px/62px "CormorantGaramond";
+      letter-spacing: 12px;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+   }
+
+   &__project-text {
+      display: inline-block;
+      max-width: 871px;
+      font-weight: 300;
+      line-height: 30px;
+      margin-bottom: 10px;
+   }
+
+   &__project-image {
+      max-width: 871px;
+   }
+}

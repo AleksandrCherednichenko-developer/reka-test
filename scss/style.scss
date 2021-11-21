@@ -1,0 +1,53 @@
+@import "_font";
+
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+}
+
+body {
+   font: 400 18px/21px "Roboto";
+   cursor: default;
+}
+.lock {
+   overflow: hidden;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+}
+
+.container {
+   max-width: 1332px;
+   padding: 0 10px;
+   margin: 0 auto;
+}
+
+.title {
+   font: 500 38px/46px "CormorantGaramond";
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   color: #131217;
+   text-align: center;
+   position: relative;
+   &::after {
+      content: "";
+      position: absolute;
+      width: 127px;
+      height: 3px;
+      background: rgba(215, 174, 122, 0.58);
+      top: 56px;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+   }
+}
+
+@import "_header";
+@import "_main";
+@import "_project";
+
+// для 2-ой страници
+@import "_style-project";

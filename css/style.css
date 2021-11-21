@@ -1,0 +1,595 @@
+@font-face {
+  font-family: "CormorantGaramond";
+  src: url("/fonts/CormorantGaramond-Regular.woff2"), url("/fonts/CormorantGaramond-Regular.woff"), url("/fonts/CormorantGaramond-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CormorantGaramond";
+  src: url("/fonts/CormorantGaramond-Medium.woff2"), url("/fonts/CormorantGaramond-Medium.woff"), url("/fonts/CormorantGaramond-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CormorantGaramond";
+  src: url("/fonts/CormorantGaramond-SemiBold.woff2"), url("/fonts/CormorantGaramond-SemiBold.woff"), url("/fonts/CormorantGaramond-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: url("/fonts/PTSans-Regular.woff2"), url("/fonts/PTSans-Regular.woff"), url("/fonts/PTSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: url("/fonts/PTSans-Bold.woff2"), url("/fonts/PTSans-Bold.woff"), url("/fonts/PTSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Light.woff2"), url("/fonts/Roboto-Light.woff"), url("/fonts/Roboto-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.woff2"), url("/fonts/Roboto-Regular.woff"), url("/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font: 400 18px/21px "Roboto";
+  cursor: default;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1332px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.title {
+  font: 500 38px/46px "CormorantGaramond";
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #131217;
+  text-align: center;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  width: 127px;
+  height: 3px;
+  background: rgba(215, 174, 122, 0.58);
+  top: 56px;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header {
+  position: absolute;
+  top: 83px;
+  z-index: 10;
+  width: 100%;
+  color: #cccbc6;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0% 5%;
+}
+
+.logo svg,
+.logo use {
+  width: 272px;
+  height: 28px;
+}
+
+.nav {
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: auto;
+}
+
+.nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+  position: relative;
+  z-index: 20;
+}
+
+.nav__menu-link {
+  margin-right: 39px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+}
+
+.nav__menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 17px;
+  width: 0%;
+  height: 1px;
+  background-color: #8f6b2d;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+  display: block;
+}
+
+.nav__menu-link:hover {
+  color: #8f6b2d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav__menu-link:hover::after {
+  width: 100%;
+}
+
+.nav__menu-link:last-child {
+  margin-right: 0;
+}
+
+.nav__menu-info {
+  position: absolute;
+  bottom: 0;
+  padding: 15px 0px 45px;
+  text-align: center;
+  width: 100%;
+  background-color: inherit;
+}
+
+.nav__menu-info p {
+  margin-bottom: 18px;
+}
+
+.nav__menu-info .social a {
+  margin-right: 19px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav__menu-info .social a:last-child {
+  margin-right: 0px;
+}
+
+.nav__menu-info .social a:hover {
+  opacity: 0.6;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav__menu-info .social svg {
+  width: 33px;
+  height: 33px;
+  cursor: pointer;
+}
+
+.nav.active {
+  top: 0px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.phone svg {
+  display: none;
+  height: 24px;
+  width: 24px;
+}
+
+.phone:hover {
+  opacity: 0.6;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+.burger span {
+  position: absolute;
+  top: 9px;
+  right: 0;
+  width: 26px;
+  height: 2px;
+  background: #b1afa9;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 2px;
+}
+
+.burger::before, .burger::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 2px;
+  background: #b1afa9;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 2px;
+}
+
+.burger::before {
+  width: 22px;
+  top: 0px;
+}
+
+.burger::after {
+  width: 100%;
+  bottom: 0px;
+}
+
+.burger.active {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.burger.active span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.burger.active.burger::before {
+  width: 100%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 9px;
+  background: #141215;
+}
+
+.burger.active.burger::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 9px;
+  background: #141215;
+}
+
+.header-fixed {
+  position: fixed;
+  background-color: #edece7;
+  color: #757470;
+  top: -10px !important;
+  padding: 42px 0px 0px 0px;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.main {
+  height: 864px;
+  background: url("/images/title-bg.jpg") 0 0 no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+.main__subtitle {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  padding-top: 311px;
+  margin-bottom: 48px;
+}
+
+.main__title {
+  font: 600 50px/62px "CormorantGaramond";
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  color: #dbd8d1;
+  position: relative;
+}
+
+.main__title h2:first-child {
+  margin-bottom: 47px;
+  position: relative;
+}
+
+.main__title h2:first-child::after {
+  content: "";
+  position: absolute;
+  top: 89px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-right: -50%;
+  width: 99px;
+  height: 1px;
+  background: #ccbb9e;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-right: -50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.scroll-down svg {
+  width: 15px;
+  height: 20px;
+}
+
+.scroll-down:hover {
+  opacity: 0.5;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.project {
+  padding: 124px 0 102px;
+  overflow: hidden;
+}
+
+.project__title {
+  margin-bottom: 75px;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.slider__item {
+  position: relative;
+}
+
+.slider__item::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.5;
+  visibility: visible;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.slider__item + .slider__item {
+  margin-left: 108px;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  z-index: 5;
+  font-size: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 48px;
+}
+
+.slider .slick-arrow.slick-prev {
+  left: 10%;
+  top: 389px;
+}
+
+.slider .slick-arrow.slick-prev::before, .slider .slick-arrow.slick-prev::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  width: 30px;
+  height: 2px;
+  background-color: rgba(66, 75, 90, 0.6);
+}
+
+.slider .slick-arrow.slick-prev::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 25%;
+}
+
+.slider .slick-arrow.slick-prev::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 30%;
+}
+
+.slider .slick-arrow.slick-next {
+  right: 10%;
+  top: 389px;
+}
+
+.slider .slick-arrow.slick-next::before, .slider .slick-arrow.slick-next::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  width: 30px;
+  height: 2px;
+  background-color: rgba(66, 75, 90, 0.6);
+}
+
+.slider .slick-arrow.slick-next::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 25%;
+}
+
+.slider .slick-arrow.slick-next::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 30%;
+}
+
+.slider .slick-center.slider__item::before {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.slider .slick-center .slider__info-title,
+.slider .slick-center .slider__info-subtitle {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.slider .slick-disabled {
+  opacity: 0.2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.slider__info {
+  margin-top: 30px;
+}
+
+.slider__info-subtitle {
+  font: 400 12px/15px "PTSans";
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #131217;
+  margin-bottom: 10px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.slider__info-subtitle a {
+  margin-left: 4px;
+  font-weight: 700;
+  color: #bf9c62;
+}
+
+.slider__info-subtitle a sup {
+  font-size: 70%;
+  vertical-align: super;
+}
+
+.slider__info-title {
+  font: 400 42px/51px "CormorantGaramond";
+  letter-spacing: 2px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header-project {
+  top: 52px;
+  color: #757470;
+}
+
+.header .logo-project svg,
+.header .logo-project use {
+  fill: #141215;
+}
+
+.content {
+  font: 400 18px/30px "Roboto";
+  color: #131217;
+  text-align: center;
+}
+
+.content__link {
+  display: inline-block;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #131217;
+  border-bottom: 2px solid #ccbb9e;
+  padding: 184px 0 13px;
+  margin-bottom: 13px;
+}
+
+.content__link .home-link {
+  margin-right: 13px;
+}
+
+.content__link .title-link {
+  color: #757470;
+}
+
+.content__project-title {
+  font: 600 51px/62px "CormorantGaramond";
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.content__project-text {
+  display: inline-block;
+  max-width: 871px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.content__project-image {
+  max-width: 871px;
+}

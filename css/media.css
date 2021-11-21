@@ -1,0 +1,226 @@
+@media (max-width: 1460px) {
+   .nav__menu-link {
+      margin-right: 20px;
+   }
+   .header__wrapper {
+      margin: 0 2%;
+   }
+   .logo svg,
+   .logo use {
+      width: 183px;
+      height: 19px;
+   }
+   .phone {
+      font-size: 15px;
+   }
+
+   .slick-slide img {
+      width: 1000px;
+   }
+   .slider .slick-arrow.slick-next,
+   .slider .slick-arrow.slick-prev {
+      top: 296px;
+      background: rgba(255, 255, 255, 0.55);
+      opacity: 0.6;
+   }
+   .slider .slick-arrow.slick-prev {
+      left: 5%;
+   }
+   .slider .slick-arrow.slick-next {
+      right: 5%;
+   }
+}
+
+@media (max-width: 1180px) {
+   .header {
+      top: 32px;
+   }
+   .header__wrapper {
+      flex-flow: wrap;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      transition: 0.3s;
+   }
+   .header__wrapper::after {
+      content: "";
+      position: fixed;
+      top: 52px;
+      z-index: 15;
+      left: 2%;
+      width: 0%;
+      height: 1px;
+      transition: 0.5s;
+   }
+   .header__wrapper.active::after {
+      background-color: rgba(20, 18, 21, 0.2);
+      top: 76px;
+      width: 96%;
+      transition: 0.5s;
+   }
+   .logo {
+      order: 2;
+      position: relative;
+      z-index: 12;
+   }
+   .nav {
+      position: fixed;
+      z-index: 11;
+      top: -100%;
+      left: 0px;
+      background: #edece7;
+      color: #757470;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+   }
+   .nav__menu {
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, 0);
+      display: inline;
+      text-align: center;
+   }
+   .nav__menu-link {
+      margin-right: 0px;
+      margin-bottom: 44px;
+   }
+   .phone {
+      order: 1;
+      position: relative;
+      z-index: 12;
+   }
+   .phone span {
+      display: none;
+   }
+   .phone svg {
+      display: block;
+   }
+   .burger {
+      display: block;
+      order: 3;
+      position: relative;
+      z-index: 12;
+   }
+
+   .slider__item {
+      margin: 0 30px;
+   }
+   .slider__item + .slider__item {
+      margin-left: 00px;
+   }
+   .slick-slide img {
+      max-width: 700px;
+   }
+   .slider .slick-arrow.slick-next,
+   .slider .slick-arrow.slick-prev {
+      top: 206px;
+   }
+   .slider .slick-arrow.slick-prev {
+      left: 0px;
+   }
+   .slider .slick-arrow.slick-next {
+      right: 0px;
+   }
+}
+
+@media (max-width: 700px) {
+   .slick-slide img {
+      max-width: 560px;
+   }
+   .slider .slick-arrow.slick-next,
+   .slider .slick-arrow.slick-prev {
+      top: 166px;
+   }
+   .project {
+      padding: 97px 0 68px;
+   }
+}
+
+@media (max-width: 560px) {
+   .main {
+      height: 733px;
+   }
+   .main__subtitle {
+      font-size: 12px;
+      line-height: 14px;
+      padding-top: 280px;
+   }
+   .main__title {
+      font-size: 32px;
+      line-height: 39px;
+   }
+   .main__title h2:first-child::after {
+      top: 56px;
+   }
+
+   .title {
+      font-size: 28px;
+      line-height: 34px;
+   }
+   .title::after {
+      top: 51px;
+   }
+   .project__title {
+      margin-bottom: 53px;
+   }
+   .slick-slide img {
+      max-width: 420px;
+   }
+   .slider .slick-arrow.slick-next,
+   .slider .slick-arrow.slick-prev {
+      top: 100px;
+   }
+   .slider__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
+   }
+   .slider__info-subtitle {
+      font-size: 10px;
+      line-height: 12px;
+      margin-bottom: 0px;
+   }
+   .slider__info-title {
+      font-size: 24px;
+      line-height: 29px;
+   }
+   .slider .slick-arrow {
+      width: 34px;
+      height: 34px;
+   }
+   .slider .slick-arrow.slick-prev::before {
+      top: 32%;
+   }
+   .slider .slick-arrow.slick-prev::after {
+      bottom: 32%;
+   }
+   .slider .slick-arrow.slick-prev::before,
+   .slider .slick-arrow.slick-prev::after {
+      width: 15px;
+      left: 8px;
+      background-color: #fff;
+      opacity: 1;
+   }
+   .slider .slick-arrow.slick-next::before {
+      top: 32%;
+   }
+   .slider .slick-arrow.slick-next::after {
+      bottom: 32%;
+   }
+   .slider .slick-arrow.slick-next::before,
+   .slider .slick-arrow.slick-next::after {
+      width: 15px;
+      right: 8px;
+      background-color: #fff;
+      opacity: 1;
+   }
+}
+
+@media (max-width: 419px) {
+   .slick-slide img {
+      max-width: 320px;
+   }
+}
