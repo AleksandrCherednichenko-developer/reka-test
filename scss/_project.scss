@@ -97,6 +97,10 @@
       transition: 0.5s;
    }
 
+   &__item-image {
+      width: 1312px;
+      height: 778px;
+   }
    &__info {
       margin-top: 30px;
    }
@@ -108,7 +112,7 @@
       margin-bottom: 10px;
       opacity: 0;
       transition: 0.5s;
-      a {
+      span {
          margin-left: 4px;
          font-weight: 700;
          color: #bf9c62;
