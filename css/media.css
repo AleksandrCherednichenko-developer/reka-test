@@ -128,11 +128,11 @@
 @media (max-width: 700px) {
    .slick-slide img {
       max-width: 560px;
-      height: 420px;
+      height: 300px;
    }
    .slider .slick-arrow.slick-next,
    .slider .slick-arrow.slick-prev {
-      top: 166px;
+      top: 150px;
    }
    .project {
       padding: 97px 0 68px;
@@ -171,7 +171,7 @@
    }
    .slider .slick-arrow.slick-next,
    .slider .slick-arrow.slick-prev {
-      top: 100px;
+      top: 140px;
    }
    .slider__info {
       display: flex;
@@ -222,6 +222,11 @@
 
 @media (max-width: 419px) {
    .slick-slide img {
-      max-width: 320px;
+      max-width: 100vw;
+      height: 260px;
+   }
+   .slider .slick-arrow.slick-next,
+   .slider .slick-arrow.slick-prev {
+      top: 120px;
    }
 }
